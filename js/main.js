@@ -160,63 +160,6 @@ const ssSwiper = function () {
 }; // end ssSwiper
 
 
-    /* ----------------------------------------------------------------
-     * donate
-     * ---------------------------------------------------------------- */
-
-
-(function () {
-
-  const donateSection = document.querySelector('.s-donate');
-  if (!donateSection) return;
-
-  let donationMode = 'once';
-
-  const amountInput = donateSection.querySelector('#donateAmount');
-  const currencySelect = donateSection.querySelector('#donateCurrency');
-  const submitBtn = donateSection.querySelector('#donateSubmit');
-
-  /* toggle */
-  donateSection.querySelectorAll('.donate-toggle__btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      donateSection.querySelectorAll('.donate-toggle__btn')
-        .forEach(b => b.classList.remove('is-active'));
-
-      btn.classList.add('is-active');
-      donationMode = btn.dataset.mode;
-    });
-  });
-
-  /* preset amounts */
-  donateSection.querySelectorAll('.donate-amounts button').forEach(btn => {
-    btn.addEventListener('click', () => {
-      donateSection.querySelectorAll('.donate-amounts button')
-        .forEach(b => b.classList.remove('is-active'));
-
-      btn.classList.add('is-active');
-      amountInput.value = btn.dataset.amount;
-    });
-  });
-
-  /* demo submit */
-  submitBtn.addEventListener('click', () => {
-    const amount = amountInput.value;
-    const currency = currencySelect.value;
-
-    if (!amount || amount <= 0) {
-      alert('Please enter a valid amount.');
-      return;
-    }
-
-    alert(
-      `Demo only\n\n` +
-      `Mode: ${donationMode === 'once' ? 'One-time' : 'Monthly'}\n` +
-      `Amount: ${currency} ${amount}\n\n` +
-      `Payment flow will be added later.`
-    );
-  });
-
-})();
 
 
 

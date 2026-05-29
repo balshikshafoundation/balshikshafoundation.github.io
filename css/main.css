@@ -224,8 +224,7 @@ p img {
 
 p.lead {
   font-family: "Geist", sans-serif ;
-  font-weight: 400;
-  font-size: 2.8rem;
+  font-weight: 200;
   line-height: 1.857;
   margin-bottom: 3.6rem;
   color: #000000;
@@ -234,6 +233,7 @@ p.lead {
 @media screen and (max-width:1200px) {
   p.lead {
     font-size: 2.6rem;
+color: #000000;
   }
 
 }
@@ -241,6 +241,7 @@ p.lead {
 @media screen and (max-width:600px) {
   p.lead {
     font-size: 2.2rem;
+
   }
 
 }
@@ -316,7 +317,7 @@ blockquote p {
 
 blockquote cite {
   display: block;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Geist", sans-serif;
   font-size: 1.5rem;
   font-style: normal;
   line-height: 1.333;
@@ -1608,6 +1609,13 @@ input::-moz-focus-inner {
   line-height: 1.222;
   margin-top: 0;
   margin-bottom: 2.8rem;
+color: #00827B;
+}
+
+.display-2 {
+  font-family: "Geist", sans-serif ;
+  font-weight: 700;
+color: #00827B;
 }
 
 /* ------------------------------------------------------------------- 
@@ -2535,6 +2543,10 @@ html.no-csstransitions .hero-content {
   margin-bottom: 4rem;
 }
 
+.s-about {
+  color: #3F3F3F;
+}
+
 .s-about .btn--about {
   display: block;
   width: 100%;
@@ -2770,7 +2782,7 @@ background-color: #222;
   width: 100%;
   height: 100%;
   background-color: #000000;
-  opacity: .2;
+  opacity: .01;
 }
 
 .s-series h2 {
@@ -3228,8 +3240,8 @@ background-color: #222;
  * ------------------------------------------------------------------- */
 
 .s-testimonials {
-  padding-top: 11.2rem;
-  padding-bottom: 10.4rem;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
  background-color: #fafafa;
   background-image:
     radial-gradient(rgba(0,0,0,0.12) 1px, transparent 0);
@@ -3258,12 +3270,12 @@ background-color: #222;
 
 .s-testimonials .swiper-container {
   overflow: hidden;
-  padding-bottom: 4.8rem;
+  padding-bottom: 1rem;
 }
 
 .s-testimonials__slider {
-  margin-top: 4.8rem;
-  max-width: 1240px;        /* ↑ from 1100 */
+  margin-top: 1rem;
+  max-width: 1100px;        /* ↑ from 1100 */
   margin-left: auto;
   margin-right: auto;
   padding-left: 4rem;
@@ -3275,8 +3287,8 @@ background-color: #222;
  * ------------------------------------------------------------------- */
 
 .s-testimonials__slide {
-  width: 52rem;             /* ↑ from 46 */
-  max-width: 52rem;
+  width: 46rem;             /* ↑ from 46 */
+  max-width: 46rem;
   font-family: "Geist", sans-serif;
   font-size: 2rem;
   line-height: 1.8;
@@ -3302,13 +3314,14 @@ background-color: #222;
 
 .s-testimonials__avatar {
   background-color: #d9d9d9;
-  width: 4.8rem;
-  height: 4.8rem;
-  padding: 0.8rem;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
   margin-right: 1.6rem;
   border-radius: 50%;
   flex-shrink: 0;
 }
+
 
 /* -------------------------------------------------------------------
  * citation
@@ -3318,7 +3331,7 @@ background-color: #222;
   display: block;
   font-family: "Geist", sans-serif;
   font-weight: 600;
-  font-size: 1.6rem;
+  font-size: 2rem;
   line-height: 1.3;
   color: #000000;
 }
@@ -3326,7 +3339,7 @@ background-color: #222;
 .s-testimonials__cite span {
   display: block;
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   line-height: 1.3;
   color: #646464;
   margin-top: 0.3rem;
@@ -3398,6 +3411,7 @@ background-color: #222;
   }
 }
 
+
 /* ==================================================
  * Donate
  * ================================================== */
@@ -3410,24 +3424,33 @@ background-color: #222;
 .s-donate {
   padding: 4.8rem 4rem;
   border: 0.2px solid #9ca3af;
-  max-width: 640px;       /* controls overall width */
+  max-width: 640px;
 }
 
-
+.donate-intro {
+  margin-bottom: 2.8rem;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #fff;
+  text-align: left;
+}
 /* --------------------------------
  * Section title
  * -------------------------------- */
 
 .donate-header {
-  font-family: "Geist", sans-serif ;
+  font-family: "Geist", sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #00827B;
-  font-size: 2.1rem;
+  font-size: 4.0rem;
   line-height: 1.333;
-  margin-bottom: 1.6rem;
-
+  margin-bottom: 2.4rem;
 }
+
+/* --------------------------------
+ * Suggested amounts
+ * -------------------------------- */
 
 .s-donate .donate-amounts {
   display: grid;
@@ -3436,7 +3459,7 @@ background-color: #222;
   margin-bottom: 3.2rem;
 }
 
-/* reset global button styles for amount buttons */
+/* amount buttons */
 .s-donate .donate-amounts button {
   height: 5.6rem;
   line-height: 5.6rem;
@@ -3454,8 +3477,9 @@ background-color: #222;
   border: 1px solid #d1d5db;
   border-radius: 0;
 
-  cursor: pointer;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
+  cursor: default;
+  transition: border-color 0.2s ease,
+              background-color 0.2s ease;
 }
 
 /* hover */
@@ -3463,103 +3487,64 @@ background-color: #222;
   border-color: #00827B;
 }
 
-/* active / selected */
-.s-donate .donate-amounts button.is-active {
-  border-color: #3f3f3f;
-  background-color: #3f3f3f;
-  color: #ffffff;
-}
-
-/* keyboard focus */
-.s-donate .donate-amounts button:focus {
-  outline: none;
-  border-color: #000000;
-}
-
 /* --------------------------------
- * Amount input + currency
+ * UPI Section
  * -------------------------------- */
 
-.donate-input input,
-.donate-input select {
-  border-bottom: 1px solid #d1d5db;
-  padding: 0.6rem 0.2rem;
-  font-size: 1.6rem;
-color: #00827B;
-  background: transparent;
-  transition: border-color 0.2s ease;
-}
-
-.donate-input input:focus,
-.donate-input select:focus {
-  outline: none;
-  border-color: #000000;
-}
-
-/* placeholder contrast */
-.donate-input input::placeholder {
-  color: #9ca3af;
-}
-
-/* --------------------------------
- * Proceed button (link-style CTA)
- * -------------------------------- */
-
-.donate-btn {
-   display: inline-block;
-  font-family: "Geist", sans-serif ;
-  font-weight: 700;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: .6rem;
-  height: 6rem;
-  line-height: 5.6rem;
-  padding: 0 3.2rem;
-  margin: 0 .4rem 1.6rem 0;
-  color: #ffffff;
-  text-decoration: none;
+.donate-upi {
   text-align: center;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: all .3s ease-in-out;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #00827B;
-  border: #00827B;
+  margin: 0 auto;
 }
 
-.donate-btn:hover {
-  background-color: #ffffff;
-  border-color: #ffffff;
-  color: #000000;
+.donate-qr {
+  margin-bottom: 2.4rem;
 }
 
-/* --------------------------------
- * Helper / demo note
- * -------------------------------- */
+.donate-qr img {
+  width: 240px;
+  max-width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 0;
+  display: block;
+  margin: 0 auto;
+}
 
-.donate-note {
-  margin-top: 1.6rem;
+.upi-id {
+  margin-top: 1.2rem;
+
+  font-family: "Geist", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  color: #fff;
+}
+
+.donate-small {
+  margin-top: 1.2rem;
+
+  font-size: 1.3rem;
+  line-height: 1.6;
+
+  color: #fff;
+}
+
+.donate-warning {
+  margin-top: 2.4rem;
+  padding-top: 1.6rem;
+
+  border-top: 1px solid #d1d5db;
+
   font-size: 1.2rem;
-  color: #00827B;
-}
+  line-height: 1.7;
 
+  color: #fff;
+  opacity: 0.8;
+}
 
 /* --------------------------------
  * Mobile refinement
  * -------------------------------- */
 
-@media screen and (max-width: 480px) {
-  .donate-amounts {
-    gap: 1.6rem 2.4rem;
-  }
-
-  .donate-btn {
-    letter-spacing: 0.28rem;
-  }
-}
-
-/* mobile */
 @media screen and (max-width: 600px) {
   .s-donate {
     padding: 3.2rem 2.4rem;
@@ -3568,11 +3553,15 @@ color: #00827B;
 }
 
 @media screen and (max-width: 480px) {
+
   .s-donate .donate-amounts {
     grid-template-columns: repeat(2, 1fr);
   }
-}
 
+  .donate-qr img {
+    width: 200px;
+  }
+}
 
 /* ===================================================================
  * # footer 
