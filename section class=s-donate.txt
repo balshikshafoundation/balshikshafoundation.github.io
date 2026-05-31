@@ -1,0 +1,33 @@
+<section class="s-donate">
+
+  <div class="donate-card">
+
+<h3 class="subhead">Donate</h3>
+    </div>
+
+    <div class="donate-upi">
+
+<p class="donate-intro" style="color: #ffffff;">Through your donation, you directly support long-term educational opportunities for children facing financial and social barriers.</p>
+
+      <div class="donate-qr">
+        <img src="images/upi-qr.png" alt="UPI QR Code for donations">
+      </div>
+
+      <p class="upi-id" style="color: #ffffff;">
+        UPI ID: <strong>yourname@upi</strong>
+      </p>
+
+      <p class="donate-small" style="color: #ffffff;">
+        Scan using any UPI app such as Google Pay, PhonePe, Paytm or BHIM.
+      </p>
+
+      <p class="donate-warning" style="color: #ffffff;">
+        Donations are currently accepted only from Indian residents using Indian bank accounts.
+        We are unable to accept foreign contributions at this time.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
